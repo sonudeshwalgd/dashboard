@@ -1,17 +1,9 @@
-import { styled } from "styled-components";
-import Index from "../container/dashboard";
+import Index from "../container/customer"
 
-const  Dashboard=()=><>
-        <Wrapper>
-        <Index/>
 
-        </Wrapper>
-
+const  Customer=()=><>
+<Index/>
 </>
 
-export default Dashboard
+export default Customer
 
-const Wrapper=styled.div`
-background-color: #f7f7fc;
-flex: 1;
-`

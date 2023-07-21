@@ -3,6 +3,7 @@ import { Outlet, Route } from 'react-router-dom'
 import NOTFOUND404 from '../../core/common/NOTFOUND404'
 import Dashboard from './pages/Dashboard'
 import Orders from './pages/Orders'
+import Customer from './pages/Customer'
 import DashboardHeader from "./../../core/common/DashboardHeader.js"
 import DashboardSidebar from "./../../core/common/DashboardSidebar.js"
 import { styled } from 'styled-components'
@@ -12,7 +13,7 @@ import { styled } from 'styled-components'
 export const HomepageRoutes=[
 <Route  path="/dashborad/*" element={<Dashboard/>}/>,
 <Route  path="/orders" element={<Orders/>}/>,
-<Route  path="/customer" element={<Orders/>}/>,
+<Route  path="/customer" element={<Customer/>}/>,
 
 
   <Route path="/*" element={<NOTFOUND404/>}/>
