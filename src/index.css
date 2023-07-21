@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Mulish-Regular;
+    src: url("./assets/fonts/Mulish-Regular.ttf");
+  }
+/* @import url("./assets/fonts/Mulish-Regular.ttf"); */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Mulish-Regular;
+    border-collapse:separate 
+    
+}
+body{
+}
+#country-select-demo-listbox ,ul[role='listbox']{
+    z-index: 9999;  
+}
+path{
+    pointer-events: none;
+}
+.MuiBox-root.css-y7qakx::-webkit-scrollbar {
+    width: 10px;
+  }
