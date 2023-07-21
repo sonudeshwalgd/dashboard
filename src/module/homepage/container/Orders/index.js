@@ -55,7 +55,6 @@ export default function Index() {
 const Wrapper = styled.div`
  flex:1;
  position: relative;
- padding: 45px 20px 20px ;
  .header{
    display:flex;
   flex-direction: row;

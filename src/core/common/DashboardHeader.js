@@ -9,12 +9,16 @@ export default function DashboardHeader({brand="Dazzie",name="Sumanto",post="Cas
   return (
     <Wrapper>
       <div className="left">
-        <img src={dashboardImages.user} alt="brand "/>
+        <div className="img-wrapper">
+        {/* <img src={dashboardImages.user} alt="brand "/> */}
+        </div>
         <h2>{brand}</h2>
       </div>
       <div className="right">
         <img src={dashboardImages.notificationBell} alt="bell" />
-        <img src={dashboardImages.user} alt="profile" />
+        <div className="profile-img-wrapper">
+        {/* <img src={dashboardImages.user} alt="profile" /> */}
+        </div>
         <span className='detail'>
           <h4>{name}</h4>
           <p>{post}</p>
@@ -38,11 +42,24 @@ border-bottom: 1px solid #ccc;
   display: flex;
   align-items: center;
   gap: 10px;
+  .img-wrapper{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: #e2e2ea;
+  }
 }
 .right{
   display: flex;
   align-items: center;
   gap: 25px;
+  .profile-img-wrapper{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+
+  }
   span{
     display: flex;
     flex-direction: column;

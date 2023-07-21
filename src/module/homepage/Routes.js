@@ -12,6 +12,9 @@ import { styled } from 'styled-components'
 export const HomepageRoutes=[
 <Route  path="/dashborad/*" element={<Dashboard/>}/>,
 <Route  path="/orders" element={<Orders/>}/>,
+<Route  path="/customer" element={<Orders/>}/>,
+
+
   <Route path="/*" element={<NOTFOUND404/>}/>
 ]
 
