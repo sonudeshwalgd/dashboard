@@ -2,12 +2,16 @@ import React from 'react'
 import { styled } from 'styled-components'
 import dashboardImages from '../../../../assets/images/dashboard'
 import Search from './Search'
+import CustomerList from './CustomerList'
 
 export default function Index() {
   return (
     <Wrapper>
         <h2>Customer</h2>
-        <Search/>    
+        <div className="content">
+        <Search/>   
+        <CustomerList/> 
+        </div>
 
     </Wrapper>
   )
@@ -22,7 +26,13 @@ background-color: #f7f7fc;
  position: relative;
  padding: 0 30px;
 h2{
-    padding: 50px 0;
+    padding: 34px 0;
+}
+.content{
+    border-radius: 10px;
+    overflow: hidden;
+ background-color: white;
+
 }
 
 `

@@ -13,7 +13,6 @@ export default function Search() {
         <div className="filter">
           <img src={dashboardImages.filter}/>
           <img src={dashboardImages.threeDots}/>
-
         </div>
 
     </Wrapper>
@@ -24,10 +23,10 @@ const Wrapper=styled.div`
 position: relative;
 width: 100%;
  flex:1;
- background-color: white;
  position: relative;
  display: flex;
  padding: 20px;
+ padding-top: 25px;
  gap: 20px;
  .search{
     flex: 1;
