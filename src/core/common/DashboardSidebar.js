@@ -6,27 +6,27 @@ import { NavLink } from "react-router-dom";
 const sidebarData=[
   {
     img:dashboardImages.customer,
-    path:"dashborad/",
+    path:"dashborad",
   },
   {
     img:dashboardImages.orders,
-    path:"dashborad/order/"
+    path:"orders/"
   },
   {
     img:dashboardImages.customer,
-    path:"dashborad/customer/"
+    path:"customer/"
   },
   {
     img:dashboardImages.packages,
-    path:"dashborad/package/"
+    path:"edit-product/"
   },
   {
     img:dashboardImages.discountCoupn,
-    path:"dashborad/discount-coupon"
+    path:"discount-coupon"
   },
   {
     img:dashboardImages.user,
-    path:"dashborad/user/"
+    path:"user/"
   },
   
 ]

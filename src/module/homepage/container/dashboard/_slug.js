@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { styled } from 'styled-components'
 import ProductCard from '../../../../core/common/ProductCard';
 
+
 const cardContent=[
   {
     img:"",
@@ -44,20 +45,25 @@ const cardContent=[
 ]
 
 
-export default function _Slug({location}) {
-  console.log(location)
+export default function _Slug() {
+  const {state} =useLocation()
   return (
+    <>
+    {state?.slug.map(ele=>(
     <Wrapper>
-      <h1>{"location"}</h1>
+      <h1>{ele}</h1>
       <div className='content-body'>
         {cardContent.map(ele=>(
-          <div className="card-wrapper">
+          <div key={ele?.title} className="card-wrapper">
             <ProductCard {...ele}/>
           </div>
         ))}
 
       </div>
     </Wrapper>
+
+    ))}
+    </>
   )
 }
 

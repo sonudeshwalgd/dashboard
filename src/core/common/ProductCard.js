@@ -4,7 +4,9 @@ import { styled } from 'styled-components'
 export default function ProductCard({ title="title",currency="$",price="**"}) {
   return (
     <Wrapper>
-        <img alt={title} src=""/>
+      <div className="img-wrapper">
+        <img/>
+      </div>
         <h4>{title}</h4>
         <p>{currency} {price}</p>
     </Wrapper>
@@ -19,9 +21,15 @@ gap: 12px;
 padding: 8px 12px 20px 12px;
 border: 1px solid #ccc;
 border-radius: 10px;
+.img-wrapper{
+  height:170px;
+  background-color: #e2e2ea;
+  border-radius: 10px;
+  
+}
 img{
     border-radius: 10px;
-    height: 150px;
+    height: 170px;
     object-fit: cover;
     /* border:  1px solid; */
 }

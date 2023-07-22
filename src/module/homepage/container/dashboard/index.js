@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Navigate, Route, Routes ,useLocation } from "react-router-dom";
 import { styled } from "styled-components";
 import _Slug from "./_slug";
 import dashboardImages from "../../../../assets/images/dashboard";
@@ -9,36 +9,41 @@ const mainProductsSubData=[
   {
     title:"All",
     path:"all",
-    slug:["food","drinks","snack","packages"]
+    slug:["Food","Drinks","Snack","Packages"]
   },
   {
     title:"Food",
     path:"food",
-    slug:["food"]
+    slug:["Food"]
   },
   {
     title:"Drinks",
     path:"drinks",
-    slug:["drinks"]
+    slug:["Drinks"]
   },
   {
     title:"Snack",
     path:"snack",
-    slug:["snack"]
+    slug:["Snack"]
   },
   {
     title:"Packages",
     path:"packages",
-    slug:["packages"]
+    slug:["Packages"]
   },
 ]
 
 export default function Index() {
-  const mainProductsSubRoutes = [<Route path ="/*" element={<_Slug />} />];
+  const mainProductsSubRoutes = [
+  <Route path="/*" element={<_Slug />} />,
+  
+];
 
+const {pathname}= useLocation()
   return (
     <>
       <Wrapper>
+        {pathname=="/dashborad" && <Navigate to="all"  /> }
         
         <div className="search">
           <img src={dashboardImages.search} alt="" />
@@ -48,10 +53,7 @@ export default function Index() {
           {mainProductsSubData.map(ele=>(
             <NavLink
               key={ele?.path}
-              to={{
-                pathname:ele?.path,
-                state:{name:"ele.slug"}
-              }}
+              to={ele?.path} state={{ slug:ele?.slug }}
               className={({ isActive, isPending }) =>
                 isPending ? "pending link" : isActive ? "active link" : "link"
               }

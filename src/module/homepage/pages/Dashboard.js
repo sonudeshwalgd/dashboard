@@ -3,8 +3,7 @@ import Index from "../container/dashboard";
 
 const  Dashboard=()=><>
         <Wrapper>
-        <Index/>
-
+            <Index/>
         </Wrapper>
 
 </>

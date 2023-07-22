@@ -7,13 +7,13 @@ import Customer from './pages/Customer'
 import DashboardHeader from "./../../core/common/DashboardHeader.js"
 import DashboardSidebar from "./../../core/common/DashboardSidebar.js"
 import { styled } from 'styled-components'
-
-
+import EditProduct from './pages/EditProduct'
 
 export const HomepageRoutes=[
 <Route  path="/dashborad/*" element={<Dashboard/>}/>,
 <Route  path="/orders" element={<Orders/>}/>,
 <Route  path="/customer" element={<Customer/>}/>,
+<Route  path="/edit-product" element={<EditProduct/>}/>,
 
 
   <Route path="/*" element={<NOTFOUND404/>}/>
