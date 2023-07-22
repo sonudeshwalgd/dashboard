@@ -139,7 +139,7 @@ table{
     td{
       display: flex;
       font-display: row;
-      padding: 20px;
+      padding: 16px;
       border-bottom: 1px solid  #ccc;
 
 

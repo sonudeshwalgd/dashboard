@@ -42,7 +42,7 @@ width: 100%;
       border: none;
       outline: none;
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       &::placeholder{
       color: #9a9ab0;
       font-weight: 500;

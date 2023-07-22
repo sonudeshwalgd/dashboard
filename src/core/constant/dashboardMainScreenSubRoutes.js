@@ -1,0 +1,27 @@
+export const mainProductsSubData=[
+    {
+      title:"All",
+      path:"all",
+      slug:["Food","Drinks","Snack","Packages"]
+    },
+    {
+      title:"Food",
+      path:"food",
+      slug:["Food"]
+    },
+    {
+      title:"Drinks",
+      path:"drinks",
+      slug:["Drinks"]
+    },
+    {
+      title:"Snack",
+      path:"snack",
+      slug:["Snack"]
+    },
+    {
+      title:"Packages",
+      path:"packages",
+      slug:["Packages"]
+    },
+  ]

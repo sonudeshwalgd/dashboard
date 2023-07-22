@@ -43,6 +43,7 @@ export default function DashboardSidebar() {
           }
         >
           <img src={ele?.img}/>
+          
         </NavLink>
 
       ))}
@@ -59,6 +60,11 @@ padding: 40px;
   background-color: #5541d7;
   color: white !important;
   border-radius: 10px;
+  img{
+  stroke: white;
+  color: white;
+
+  }
 }
 img{
   padding: 12px;

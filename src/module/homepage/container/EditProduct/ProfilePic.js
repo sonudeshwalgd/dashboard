@@ -9,7 +9,10 @@ export default function ProfilePic() {
         </div>
         <div className="text-wrapper">
             <h3>Select Youy product picture</h3>
-            <button className='primary-btn'>Browser</button>
+            <input type="file" id="update" />
+            <label className='primary-btn' htmlFor="update">
+                Browser
+            </label>
         </div>
     </Wrapper>
   )

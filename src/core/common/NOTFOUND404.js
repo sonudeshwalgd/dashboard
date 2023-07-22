@@ -9,7 +9,7 @@ export default function NOTFOUND404() {
     useEffect(()=>{
        const timer= setInterval(()=>{
         if(state==0){
-            naviagte("/")
+            naviagte(-1)
         }
         setState(state=>state-1)
 
@@ -23,7 +23,6 @@ export default function NOTFOUND404() {
   return (
     <>
     <div className='status-404'>
-
     </div>
 
         <h1>NOTFOUND404</h1>

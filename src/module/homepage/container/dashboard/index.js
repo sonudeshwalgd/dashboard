@@ -1,56 +1,29 @@
-import React from "react";
-import { NavLink, Navigate, Route, Routes ,useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import { NavLink, Navigate, Route, Routes ,useLocation, useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import _Slug from "./_slug";
 import dashboardImages from "../../../../assets/images/dashboard";
+import constant  from "../../../../core/constant";
 
-
-const mainProductsSubData=[
-  {
-    title:"All",
-    path:"all",
-    slug:["Food","Drinks","Snack","Packages"]
-  },
-  {
-    title:"Food",
-    path:"food",
-    slug:["Food"]
-  },
-  {
-    title:"Drinks",
-    path:"drinks",
-    slug:["Drinks"]
-  },
-  {
-    title:"Snack",
-    path:"snack",
-    slug:["Snack"]
-  },
-  {
-    title:"Packages",
-    path:"packages",
-    slug:["Packages"]
-  },
-]
 
 export default function Index() {
   const mainProductsSubRoutes = [
   <Route path="/*" element={<_Slug />} />,
-  
 ];
+
 
 const {pathname}= useLocation()
   return (
     <>
       <Wrapper>
-        {pathname=="/dashborad" && <Navigate to="all"  /> }
+        {pathname=="/dashborad" && <Navigate to="all" state={{slug:constant?.mainProductsSubData?.[0]?.slug}} /> }
         
         <div className="search">
           <img src={dashboardImages.search} alt="" />
             <input placeholder="Search Here..." type="text" />
         </div>
         <div className="navbar">
-          {mainProductsSubData.map(ele=>(
+          {constant?.mainProductsSubData.map(ele=>(
             <NavLink
               key={ele?.path}
               to={ele?.path} state={{ slug:ele?.slug }}

@@ -35,8 +35,11 @@ h3{
     width: max-content;
     cursor: pointer;
 }
-body{
+
+input[type="file"]{
+    display: none;
 }
+
 #country-select-demo-listbox ,ul[role='listbox']{
     z-index: 9999;  
 }

@@ -22,8 +22,13 @@ const Wrapper=styled.td`
 position: relative;
 width: 100%;
 p{
-
   color:#5541d7;
+  font-weight: 600;
+  padding-top: 14px;
+}
+tr{
+  /* padding-left: 12px; */
+  padding-right: 12px;
 }
 
 `

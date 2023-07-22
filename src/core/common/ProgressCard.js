@@ -1,5 +1,6 @@
 import React from 'react'
 import { styled } from 'styled-components'
+import dashboardImages from '../../assets/images/dashboard'
 
 export default function ProgressCard({ title="title",currency="$",percentage="**",positive="1",value="**"}) {
   return (
@@ -7,13 +8,13 @@ export default function ProgressCard({ title="title",currency="$",percentage="**
       <div className="row">
         <h4>{title}</h4>
         {
-          positive?<img src="" alt="arrowUp"/>:<img src="" alt="arrowDown"/>
+          Boolean(+positive)?<img src={dashboardImages.arrowUp} key={"arrowUp"} alt="arrowUp"/>:<img src={dashboardImages.arrowDown} key={"arrowDown"} alt="arrowDown"/>
         }
         
       </div>
       <div className="row">
         <h4>{currency}{value}</h4>
-        <h4>{positive?"+":"-"}{percentage}%</h4>
+        <h4 className={Boolean(+positive)?"up":"down"}>{positive?"+":"-"}{percentage}%</h4>
         
       </div>
 
@@ -34,6 +35,16 @@ background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+img{
+  height: 20px ;
+  padding-right: 10px;
+}
+.down{
+  color: #f04461;
+}
+.up{
+  color:#42bda1
 }
 
 

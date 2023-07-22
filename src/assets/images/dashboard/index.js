@@ -9,6 +9,8 @@ import pen from "./pen.svg"
 import plus from "./plus.svg"
 import search from "./SEARCH.svg"
 import threeDots from "./threedots.svg"
+import arrowUp from "./arrow-up.png"
+import arrowDown from "./arrow-down.png"
 
  const dashboardImages={
     discountCoupn,
@@ -22,6 +24,8 @@ import threeDots from "./threedots.svg"
     search,
     threeDots,
     user,
+    arrowUp,
+    arrowDown,
 }
 export default dashboardImages
 
