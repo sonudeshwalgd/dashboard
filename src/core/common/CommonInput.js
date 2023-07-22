@@ -5,10 +5,10 @@ import { styled } from 'styled-components'
 
 export default function CommonInput({id="name",title="ID",placeholder="Enter your ID",type="text",dropdownList=[]}) {
 
-    const CompanySize=()=>{
+    const Category=()=>{
         return(
             <Autocomplete
-            placeholder="Company size"
+            placeholder="Drink"
             options={dropdownList}
             sx={{ width: "100%" ,padding:"10px",fontSize:"17px" ,marginTop:"8px",background:"#f7f7fc"}}
             name="company_size"
@@ -22,7 +22,7 @@ export default function CommonInput({id="name",title="ID",placeholder="Enter you
             type=="dropdown"?
             <>
             <label >{title}</label>
-            <CompanySize/>
+            <Category/>
             </>:<>
             <div className="input-wrapper">
             <label htmlFor={id} >{title}</label>
