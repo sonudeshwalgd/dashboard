@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet, Route } from 'react-router-dom'
+import { Navigate, Outlet, Route } from 'react-router-dom'
 import NOTFOUND404 from '../../core/common/NOTFOUND404'
 import Dashboard from './pages/Dashboard'
 import Orders from './pages/Orders'
@@ -8,6 +8,7 @@ import DashboardHeader from "./../../core/common/DashboardHeader.js"
 import DashboardSidebar from "./../../core/common/DashboardSidebar.js"
 import { styled } from 'styled-components'
 import EditProduct from './pages/EditProduct'
+import { useLocation } from 'react-router-dom'
 
 export const HomepageRoutes=[
 <Route  path="/dashborad/*" element={<Dashboard/>}/>,
@@ -20,9 +21,12 @@ export const HomepageRoutes=[
 ]
 
 export  function HomePageOutlet() {
+
+  const {pathname} =useLocation()
   return (
     <>
     <Wrapper>
+      {pathname=="/" && <Navigate to="dashborad"/>}
         <DashboardHeader/>
         <div className='flex'>
           <div className="sidebar">
